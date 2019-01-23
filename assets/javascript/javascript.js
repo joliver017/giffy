@@ -25,7 +25,7 @@ $(document).ready(function () {
         }).then(function(response){
           console.log(response)
          // $("#container").text(JSON.stringify(response))
-          $("#container").append("<iframe src=" + response.data[0].embed_url + "width='480' height='252' frameBorder='0' class='giphy-embed' allowFullscreen>" + "</iframe>")
+          $("#container").append("<img src=" + response.data[0].embed_url + "/>")
         })
       };
 // <iframe src="https://giphy.com/embed/lXiRKBj0SAA0EWvbG" width="480" height="252" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
