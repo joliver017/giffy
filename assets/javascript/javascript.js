@@ -35,9 +35,24 @@ $(document).ready(function () {
            // $("<img>").attr("data-animate", response.data[i].images.fixed_height.url)
            // $("<img>").addClass("gif");
           }
+
+          $(".gif").on("click", function() {
+            var state = $(this).attr("data-state");
+            console.log(this)
+    
+          if (state === 'still') {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate");
+          } else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+          }
+        });
           
         })
       };
+
+    
 
     $("#add-person").on("click", function(event) {
         event.preventDefault();
@@ -51,7 +66,7 @@ $(document).ready(function () {
     $(document).on("click", ".person", displayGif);
     createButtons();
 
-
+   
 
 
 });
