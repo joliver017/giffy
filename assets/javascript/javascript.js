@@ -1,15 +1,15 @@
 $(document).ready(function () {
-    var disneyMovies = ["Coco", "Toy Story", "Up", "Inside Out", "Big Hero 6"]
+    var rappers = ["Kendrick Lamar", "J Cole", "Childish Gambino", "Drake", "Kid Cudi"]
 
 
     function createButtons() {
         $("#buttonsDiv").empty();
 
-        for (i=0; i < disneyMovies.length; i++) {
+        for (i=0; i < rappers.length; i++) {
             var btn = $("<button>");
-            btn.addClass("movie");
-            btn.attr("data-name", disneyMovies[i]);
-            btn.text(disneyMovies[i]);
+            btn.addClass("person");
+            btn.attr("data-name", rappers[i]);
+            btn.text(rappers[i]);
             $("#buttonsDiv").append(btn);
         }
 
@@ -19,6 +19,8 @@ $(document).ready(function () {
         var searchTerm = $(this).attr("data-name")
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchTerm + "&api_key=P4ydkWOBrq7IjD4grkWGBWusd2oTIfBI&limit=10";
 
+        $("#container").empty();
+
         $.ajax({
           url: queryURL,
           method: "GET"
@@ -26,12 +28,26 @@ $(document).ready(function () {
           console.log(response)
           console.log(searchTerm)
           console.log(response.data[0].images.fixed_height.url)
-         // $("#container").text(JSON.stringify(response))
-          $("#container").prepend("<img src= '" + response.data[0].images.fixed_height.url + "' />")
+
+          for (var i=0; i < response.data.length; i++) {
+            $("#container").prepend("<img src= '" + response.data[i].images.fixed_height_still.url + "' />")
+          }
+          
         })
       };
-// <iframe src="https://giphy.com/embed/lXiRKBj0SAA0EWvbG" width="480" height="252" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-    $(document).on("click", ".movie", displayGif);
+
+    $("#add-person").on("click", function(event) {
+        event.preventDefault();
+        
+        var rapper = $("#search-input").val().trim();
+        rappers.push(rapper);
+        createButtons();
+
+      });
+
+    $(document).on("click", ".person", displayGif);
     createButtons();
+
+    $(document).on("click", "")
 
 });
