@@ -1,5 +1,7 @@
-#header {
-
+body {
+    background-image: url("../images/mic-background.jpg");
+    background-size: cover;
+    
 }
 
 .gif {
@@ -36,5 +38,13 @@ button:hover, #add-person:hover {
 #container {
     margin: auto;
     width: 80%;
+    height: 400px;
+    overflow-y: auto;
+}
+
+#form {
+    font-family: Verdana;
+    color: #fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
