@@ -11,7 +11,9 @@ body {
 button, #add-person { 
     background-color: #000;
     color:#fff;
-    border: none;
+    border: solid;
+    border-width: 0.5px;
+    border-color: #fff;
     border-radius: 5px;
     margin: 5px;
     padding: 10px;
