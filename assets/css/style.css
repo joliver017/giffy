@@ -1,0 +1,31 @@
+.gif {
+    margin: 10px;
+}
+
+button { 
+    background-color: #000;
+    color:#fff;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+button:hover {
+    color: #ffdf00;
+}
+
+#add-person {
+    background-color: #fff;
+    color:#000;
+    border: solid;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+#buttonsDiv {
+    margin: auto;
+}

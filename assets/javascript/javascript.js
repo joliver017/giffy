@@ -31,9 +31,6 @@ $(document).ready(function () {
 
           for (var i=0; i < response.data.length; i++) {
             $("#container").prepend("<img src= '" + response.data[i].images.fixed_height_still.url + "' data-still='" + response.data[i].images.fixed_height_still.url + "' data-animate='" + response.data[i].images.fixed_height.url + "' data-state='still' class='gif'/>")
-           // $("<img>").attr("data-still", response.data[i].images.fixed_height_still.url)
-           // $("<img>").attr("data-animate", response.data[i].images.fixed_height.url)
-           // $("<img>").addClass("gif");
           }
 
           $(".gif").on("click", function() {
