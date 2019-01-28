@@ -55,8 +55,14 @@ $(document).ready(function () {
         event.preventDefault();
         
         var rapper = $("#search-input").val().trim();
-        rappers.push(rapper);
-        createButtons();
+
+        if ($("#search-input").val() == "") {
+          alert("Please enter a name");
+        }
+        else {
+          rappers.push(rapper);
+          createButtons();
+        }
 
       });
 

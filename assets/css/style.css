@@ -1,8 +1,12 @@
+#header {
+
+}
+
 .gif {
     margin: 10px;
 }
 
-button { 
+button, #add-person { 
     background-color: #000;
     color:#fff;
     border: none;
@@ -12,20 +16,25 @@ button {
     text-align: center;
 }
 
-button:hover {
+button:hover, #add-person:hover {
     color: #ffdf00;
 }
 
-#add-person {
-    background-color: #fff;
-    color:#000;
-    border: solid;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 10px;
+#header {
     text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-family: Verdana;
+    font-style: Italic;
 }
 
-#buttonsDiv {
+#buttonsDiv, #form {
     margin: auto;
+    width: 50%;
 }
+
+#container {
+    margin: auto;
+    width: 80%;
+}
+
