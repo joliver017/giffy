@@ -30,8 +30,8 @@ $(document).ready(function () {
           console.log(response.data[0].images.fixed_height.url)
 
           for (var i=0; i < response.data.length; i++) {
-            $("#container").prepend("<img src= '" + response.data[i].images.fixed_height_still.url + "' data-still='" + response.data[i].images.fixed_height_still.url + "' data-animate='" + response.data[i].images.fixed_height.url + "' data-state='still' class='gif'/>")
-            $("#container").prepend("<p class='rating'>Rating: " + response.data[i].rating + "</p>");
+            $("#container").append("<p class='rating'>Rating: " + response.data[i].rating + "</p>");
+            $("#container").append("<img src= '" + response.data[i].images.fixed_height_still.url + "' data-still='" + response.data[i].images.fixed_height_still.url + "' data-animate='" + response.data[i].images.fixed_height.url + "' data-state='still' class='gif'/>")
           }
 
           $(".gif").on("click", function() {
