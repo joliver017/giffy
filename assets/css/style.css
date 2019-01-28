@@ -30,6 +30,7 @@ button:hover, #add-person:hover {
     color: #fff;
     font-family: Verdana;
     font-style: Italic;
+    font-size: 40px;
 }
 
 #buttonsDiv, #form {
